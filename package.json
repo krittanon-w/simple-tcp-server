@@ -1,0 +1,20 @@
+{
+  "name": "simple-tcp-server",
+  "version": "1.0.0",
+  "description": "simple tcp server for handle all tcp package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krittanon-w/simple-tcp-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krittanon-w/simple-tcp-server/issues"
+  },
+  "homepage": "https://github.com/krittanon-w/simple-tcp-server#readme"
+}
