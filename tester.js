@@ -6,8 +6,6 @@ var client = new net.Socket();
 
 var payload = 'hello';
 
-
-
 client.connect(1337, '127.0.0.1', function() {
   console.log('$ > connected..');
   console.log('$ > req package: ',payload);
