@@ -5,7 +5,7 @@ var server = net.createServer();
 
 server.on('connection', handleConnection);
 
-server.listen(1337, "127.0.0.1", function() {
+server.listen(1337, "localhost", function() {
   console.log('$ > server listening to %j', server.address());
 });
 
