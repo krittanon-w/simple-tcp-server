@@ -6,7 +6,11 @@ var client = new net.Socket();
 
 var payload = 'hello';
 
-client.connect(1337, '127.0.0.1', function() {
+var host = process.argv[2] != null ? process.argv[2] : "localhost";
+
+console.log('connect to: '+host);
+
+client.connect(1337, host, function() {
   console.log('$ > connected..');
   console.log('$ > req package: ',payload);
   client.write(payload);
