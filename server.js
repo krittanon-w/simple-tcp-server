@@ -18,7 +18,7 @@ function handleConnection(socket) {
   socket.once('close', onClose);
 
   function onData(data) {
-    console.log('    $ > get in: ', data.toString());
+    console.log('    $ > received package: ', data.toString());
     socket.write(data.toString()+' [ok]');
   }
 
