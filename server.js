@@ -4,6 +4,7 @@ var net = require('net');
 var server = net.createServer();
 
 server.on('connection', handleConnection);
+var colors = require('colors');
 
 server.listen(1337, "localhost", function() {
   console.log('$ > server listening to %j', server.address());
@@ -21,10 +22,10 @@ function handleConnection(socket) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
     if(msg.indexOf(',7')!=-1){
-      console.log('    $ > card msg 7x: ', msg);
+      console.log('    $ > card msg 7x: '+msg+''.green);
     }
     else{
-      console.log('    $ > can not found 7x message');
+      console.log('    $ > can not found 7x message'.red);
     }
     socket.write('[ok]');
   }

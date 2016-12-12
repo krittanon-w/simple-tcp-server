@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "tester": "node tester.js"
-
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/krittanon-w/simple-tcp-server/issues"
   },
-  "homepage": "https://github.com/krittanon-w/simple-tcp-server#readme"
+  "homepage": "https://github.com/krittanon-w/simple-tcp-server#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
 }
