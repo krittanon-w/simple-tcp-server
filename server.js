@@ -21,8 +21,12 @@ function handleConnection(socket) {
   function onData(data) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
-    if(msg.indexOf(';7')!=-1){
-      console.log(colors.green('    $ > card msg 7x: '+msg));
+    let cut_index = msg.indexOf(';7');
+    if(cut_index!=-1){
+      console.log(colors.green('    $ > msg contain 7x: '+msg));
+      let card_msg = msg.slice(cut_index+1, msg.length)
+      card_msg = card_msg.slice(0, card_msg.indexOf(';'))
+      console.log(colors.yellow('    $ > card msg: '+card_msg));
     }
     else{
       console.log('    $ > can not found 7x message'.red);
