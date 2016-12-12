@@ -22,7 +22,7 @@ function handleConnection(socket) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
     if(msg.indexOf(',7')!=-1){
-      console.log('    $ > card msg 7x: '+msg+''.green);
+      console.log(colors.green('    $ > card msg 7x: '+msg));
     }
     else{
       console.log('    $ > can not found 7x message'.red);
