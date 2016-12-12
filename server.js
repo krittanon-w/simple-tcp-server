@@ -18,8 +18,15 @@ function handleConnection(socket) {
   socket.once('close', onClose);
 
   function onData(data) {
-    console.log('    $ > received package: ', data.toString());
-    socket.write(data.toString()+' [ok]');
+    let msg = data.toString();
+    console.log('    $ > received package: ', msg);
+    if(msg.indexOf(',7')!=-1){
+      console.log('    $ > card msg 7x: ', msg);
+    }
+    else{
+      console.log('    $ > can not found 7x message');
+    }
+    // socket.write(msg+' [ok]');
   }
 
   function onError(err) {
