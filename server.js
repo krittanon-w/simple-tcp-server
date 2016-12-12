@@ -21,12 +21,12 @@ function handleConnection(socket) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
     if(msg.indexOf(',7')!=-1){
-      console.info('    $ > card msg 7x: ', msg);
+      console.log('    $ > card msg 7x: ', msg);
     }
     else{
-      console.error('    $ > can not found 7x message');
+      console.log('    $ > can not found 7x message');
     }
-    // socket.write(msg+' [ok]');
+    socket.write('[ok]');
   }
 
   function onError(err) {
