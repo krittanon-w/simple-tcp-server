@@ -21,10 +21,10 @@ function handleConnection(socket) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
     if(msg.indexOf(',7')!=-1){
-      console.log('    $ > card msg 7x: ', msg);
+      console.info('    $ > card msg 7x: ', msg);
     }
     else{
-      console.log('    $ > can not found 7x message');
+      console.err('    $ > can not found 7x message');
     }
     // socket.write(msg+' [ok]');
   }
