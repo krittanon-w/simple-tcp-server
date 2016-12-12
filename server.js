@@ -25,7 +25,7 @@ function handleConnection(socket) {
     if(cut_index!=-1){
       console.log(colors.green('    $ > msg contain 7x: '+msg));
       let card_msg = msg.slice(cut_index+1, msg.length)
-      card_msg = card_msg.slice(0, card_msg.indexOf(';'))
+      card_msg = card_msg.slice(0, card_msg.indexOf(';')+1)
       console.log(colors.yellow('    $ > card msg: '+card_msg));
     }
     else{
