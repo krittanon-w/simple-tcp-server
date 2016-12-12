@@ -24,7 +24,7 @@ function handleConnection(socket) {
       console.info('    $ > card msg 7x: ', msg);
     }
     else{
-      console.err('    $ > can not found 7x message');
+      console.error('    $ > can not found 7x message');
     }
     // socket.write(msg+' [ok]');
   }
