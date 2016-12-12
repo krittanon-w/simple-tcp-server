@@ -21,7 +21,7 @@ function handleConnection(socket) {
   function onData(data) {
     let msg = data.toString();
     console.log('    $ > received package: ', msg);
-    if(msg.indexOf(',7')!=-1){
+    if(msg.indexOf(';7')!=-1){
       console.log(colors.green('    $ > card msg 7x: '+msg));
     }
     else{
